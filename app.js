@@ -13,13 +13,17 @@ $('body').on('click', function convertCurrency(event) {
     	var currencyInput = $('input[type=text]').val();
     	// console.log((currencyInput) );
   	}	if ('value' in event.target && event.target.value === 'EUR') {
-  		console.log(((currencyInput) * response.rates.EUR) * .81);
+  		var EUR= ((currencyInput) * (response.rates.EUR) * .81);
+  		$('#output_amount').append('<p>' + "The exchange rate for $" + currencyInput + " to EUR is " + EUR + '</p>');
   	}	if ('value' in event.target && event.target.value === 'GBP') {
-  		console.log((currencyInput) *(response.rates.GBP) * .81);
+  		var GBP= ((currencyInput) *(response.rates.GBP) * .81);
+  		$('#output_amount').append('<p>' + "The exchange rate for $" + currencyInput + " to GBP is " + GBP + '</p>');
   	}	if ('value' in event.target && event.target.value === 'CNY') {
-  		console.log((currencyInput) *(response.rates.CNY) * .81);
+  		var CNY= ((currencyInput) * (response.rates.CNY) * .81);
+  		$('#output_amount').append('<p>' + "The exchange rate for $" + currencyInput + " to CNY is " + CNY + '</p>');
 	}	if ('value' in event.target && event.target.value === 'JPY') {
-  		console.log((currencyInput) *(response.rates.JPY) * .81);
+  		var JPY= ((currencyInput)  *(response.rates.JPY) * .81);
+  		$('#output_amount').append('<p>' + "The exchange rate for $" + currencyInput + " to JPY is " + JPY + '</p>');
   	}
 })
 
